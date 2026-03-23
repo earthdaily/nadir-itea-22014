@@ -31,7 +31,8 @@
         <nav class="nav" aria-label="Primary">
           <a href="#about">About</a>
           <a href="#objectives">Objectives</a>
-          <a href="#consortium">Consortium</a>
+          <a href="#news">News</a>
+          <a href="#partners">Partners</a>
           <a href="#timeline">Timeline</a>
           <a href="#resources">Resources</a>
         </nav>
@@ -94,60 +95,213 @@
         </div>
       </section>
 
-      <section id="consortium" aria-labelledby="consortium-title">
-        <h2 class="section__title" id="consortium-title">Consortium</h2>
-        <p style="margin-top: 0; color: var(--text-muted); font-size: 0.98rem">
-          Partners are listed as published on the official ITEA project page—please verify the
-          latest composition on
-          <a href="https://itea4.org/project/nadir.html">itea4.org</a>.
+      <section id="news" aria-labelledby="news-title">
+        <h2 class="section__title" id="news-title">News</h2>
+        <p class="section__intro">
+          Project updates and milestones. Add new items by copying a <code>article.news-item</code>
+          block in <code>index.html</code>.
         </p>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">Country</th>
-                <th scope="col">Organisation</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Canada</td>
-                <td>EarthDaily Analytics (project lead)</td>
-              </tr>
-              <tr>
-                <td>Canada</td>
-                <td>ABB</td>
-              </tr>
-              <tr>
-                <td>Canada</td>
-                <td>EarthSight International Inc.</td>
-              </tr>
-              <tr>
-                <td>Portugal</td>
-                <td>DRAGONPRAXIS</td>
-              </tr>
-              <tr>
-                <td>Portugal</td>
-                <td>ISEP</td>
-              </tr>
-              <tr>
-                <td>Portugal</td>
-                <td>OPT</td>
-              </tr>
-              <tr>
-                <td>Republic of Korea</td>
-                <td>Nara Space Technology</td>
-              </tr>
-              <tr>
-                <td>Romania</td>
-                <td>BEIA Consult International</td>
-              </tr>
-              <tr>
-                <td>United Kingdom</td>
-                <td>ForestRe Limited</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="news-list">
+          <article class="news-item card">
+            <time class="news-item__date" datetime="2024-04-01">April 2024</time>
+            <h3 class="news-item__title">NADIR launches under ITEA 4</h3>
+            <p class="news-item__excerpt">
+              The consortium begins work on a software-intensive platform for natural-hazard risk
+              intelligence, combining Earth observation with ground-based and contextual data.
+            </p>
+          </article>
+          <article class="news-item card">
+            <time class="news-item__date" datetime="2024-09-01">September 2024</time>
+            <h3 class="news-item__title">Consortium alignment workshop</h3>
+            <p class="news-item__excerpt">
+              Partners aligned on architecture priorities and interoperability goals for shared
+              analytics and delivery to downstream users.
+            </p>
+          </article>
+          <article class="news-item card">
+            <time class="news-item__date" datetime="2025-01-15">January 2025</time>
+            <h3 class="news-item__title">Public microsite published</h3>
+            <p class="news-item__excerpt">
+              This site provides a single entry point for NADIR news, partner information, and
+              links to the official ITEA programme materials.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="partners" aria-labelledby="partners-title">
+        <h2 class="section__title" id="partners-title">Partners</h2>
+        <p class="section__intro">
+          Nine organisations across five countries contribute to NADIR. Verify the latest list on
+          the <a href="https://itea4.org/project/nadir.html">official ITEA project page</a>. Logo
+          files in <code>assets/partners/</code> are placeholders—replace with approved brand
+          assets where required.
+        </p>
+        <div class="partner-grid">
+          <article class="partner-card card">
+            <div class="partner-card__logo">
+              <img
+                src="assets/partners/earthdaily-analytics.svg"
+                width="320"
+                height="120"
+                alt="EarthDaily Analytics logo"
+              />
+            </div>
+            <div class="partner-card__body">
+              <h3 class="partner-card__name">
+                EarthDaily Analytics
+                <span class="partner-card__badge">Project lead</span>
+              </h3>
+              <p class="partner-card__country">Canada</p>
+              <p class="partner-card__desc">
+                Leads the project and contributes Earth observation analytics, platform vision, and
+                coordination across the consortium.
+              </p>
+              <a class="partner-card__link" href="https://earthdaily.com/">earthdaily.com</a>
+            </div>
+          </article>
+
+          <article class="partner-card card">
+            <div class="partner-card__logo">
+              <img src="assets/partners/abb.svg" width="320" height="120" alt="ABB logo" />
+            </div>
+            <div class="partner-card__body">
+              <h3 class="partner-card__name">ABB</h3>
+              <p class="partner-card__country">Canada</p>
+              <p class="partner-card__desc">
+                Brings industrial technology and integration experience relevant to reliable sensing,
+                automation, and operational systems.
+              </p>
+              <a class="partner-card__link" href="https://global.abb/">global.abb</a>
+            </div>
+          </article>
+
+          <article class="partner-card card">
+            <div class="partner-card__logo">
+              <img
+                src="assets/partners/earthsight-international.svg"
+                width="320"
+                height="120"
+                alt="EarthSight International logo"
+              />
+            </div>
+            <div class="partner-card__body">
+              <h3 class="partner-card__name">EarthSight International Inc.</h3>
+              <p class="partner-card__country">Canada</p>
+              <p class="partner-card__desc">
+                Contributes applied EO and geospatial insight for hazard monitoring and risk-related
+                use cases.
+              </p>
+            </div>
+          </article>
+
+          <article class="partner-card card">
+            <div class="partner-card__logo">
+              <img
+                src="assets/partners/dragonpraxis.svg"
+                width="320"
+                height="120"
+                alt="DRAGONPRAXIS logo"
+              />
+            </div>
+            <div class="partner-card__body">
+              <h3 class="partner-card__name">DRAGONPRAXIS</h3>
+              <p class="partner-card__country">Portugal</p>
+              <p class="partner-card__desc">
+                Supports software, data, and innovation activities aligned with the project’s
+                product and dissemination goals.
+              </p>
+            </div>
+          </article>
+
+          <article class="partner-card card">
+            <div class="partner-card__logo">
+              <img src="assets/partners/isep.svg" width="320" height="120" alt="ISEP logo" />
+            </div>
+            <div class="partner-card__body">
+              <h3 class="partner-card__name">ISEP</h3>
+              <p class="partner-card__country">Portugal</p>
+              <p class="partner-card__desc">
+                Instituto Superior de Engenharia do Porto contributes research and engineering
+                capacity in intelligent systems and applications.
+              </p>
+              <a class="partner-card__link" href="https://www.isep.ipp.pt/">isep.ipp.pt</a>
+            </div>
+          </article>
+
+          <article class="partner-card card">
+            <div class="partner-card__logo">
+              <img src="assets/partners/opt.svg" width="320" height="120" alt="OPT logo" />
+            </div>
+            <div class="partner-card__body">
+              <h3 class="partner-card__name">OPT</h3>
+              <p class="partner-card__country">Portugal</p>
+              <p class="partner-card__desc">
+                Portuguese industry partner contributing to technical work packages and validation
+                aligned with ITEA objectives.
+              </p>
+            </div>
+          </article>
+
+          <article class="partner-card card">
+            <div class="partner-card__logo">
+              <img
+                src="assets/partners/nara-space.svg"
+                width="320"
+                height="120"
+                alt="Nara Space Technology logo"
+              />
+            </div>
+            <div class="partner-card__body">
+              <h3 class="partner-card__name">Nara Space Technology</h3>
+              <p class="partner-card__country">Republic of Korea</p>
+              <p class="partner-card__desc">
+                Adds space-technology and satellite-related R&amp;D perspectives to the consortium’s
+                Earth observation roadmap.
+              </p>
+              <a class="partner-card__link" href="https://www.naraspace.com/">naraspace.com</a>
+            </div>
+          </article>
+
+          <article class="partner-card card">
+            <div class="partner-card__logo">
+              <img
+                src="assets/partners/beia-consult.svg"
+                width="320"
+                height="120"
+                alt="BEIA Consult International logo"
+              />
+            </div>
+            <div class="partner-card__body">
+              <h3 class="partner-card__name">BEIA Consult International</h3>
+              <p class="partner-card__country">Romania</p>
+              <p class="partner-card__desc">
+                Contributes ICT consulting, integration, and dissemination experience across
+                European collaborative projects.
+              </p>
+              <a class="partner-card__link" href="https://www.beia.eu/">beia.eu</a>
+            </div>
+          </article>
+
+          <article class="partner-card card">
+            <div class="partner-card__logo">
+              <img
+                src="assets/partners/forestre.svg"
+                width="320"
+                height="120"
+                alt="ForestRe logo"
+              />
+            </div>
+            <div class="partner-card__body">
+              <h3 class="partner-card__name">ForestRe Limited</h3>
+              <p class="partner-card__country">United Kingdom</p>
+              <p class="partner-card__desc">
+                Brings insurance and risk-transfer domain knowledge to connect analytics outputs with
+                market and resilience stakeholders.
+              </p>
+              <a class="partner-card__link" href="https://www.forestre.com/">forestre.com</a>
+            </div>
+          </article>
         </div>
       </section>
 

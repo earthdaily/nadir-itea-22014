@@ -57,9 +57,10 @@ python3 -m http.server 8080
 
 | Path | Purpose |
 |------|---------|
-| `index.html` | Single-page site |
+| `index.html` | Single-page site (News + Partners sections) |
 | `css/style.css` | Theme (ITEA-inspired blues / teal accent) |
 | `assets/nadir-logo.svg` | Project logo |
+| `assets/partners/*.svg` | Partner logos (replace placeholders with approved brand files) |
 
 ## Maintenance
 
