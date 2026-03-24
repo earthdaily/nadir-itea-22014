@@ -36,7 +36,7 @@ This repository must be created in the **EarthDaily** GitHub organization (we ca
 
 - On GitHub: **New repository** → Owner: **earthdaily** → name e.g. `nadir-itea-22014` → **Public** → Create (no README, or replace with this project).
 
-### 2. Push this folder as the initial commit
+### 2. Push this folder as the initial commit 
 
 From your machine (adjust the remote URL if you chose a different repo name):
 
