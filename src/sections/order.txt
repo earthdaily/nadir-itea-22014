@@ -1,0 +1,7 @@
+# One filename per line; order = order inside <main>
+about.html
+objectives.html
+news.html
+partners.html
+timeline.html
+resources.html

@@ -1,7 +1,32 @@
 # NADIR — ITEA 4 Project 22014 (static site)
 
-Lightweight, static microsite for the **NADIR** project under the [ITEA](https://itea.org/) programme.  
+Lightweight, static microsite for the **NADIR** project under the [ITEA](https://itea4.org/) programme.  
 Content is aligned with public ITEA listings; update copy when the official [project page](https://itea4.org/project/nadir.html) changes.
+
+## Layout: fragments + build
+
+The page is split into small HTML files under `src/`, then assembled into **`index.html`** by `build.py` (Python 3, stdlib only). This keeps each section in its own file without adding Node or other heavy tooling.
+
+| Location | Role |
+|----------|------|
+| `src/includes/head.html` | `<head>` contents (meta, title, CSS link) |
+| `src/includes/top.html` | Skip link + site header / nav |
+| `src/includes/hero.html` | Hero block (above `<main>`) |
+| `src/includes/footer.html` | Footer + year script |
+| `src/sections/*.html` | One file per main section |
+| `src/sections/order.txt` | Section order inside `<main>` (one filename per line) |
+
+After editing any fragment:
+
+```bash
+python3 build.py
+```
+
+Commit both **`src/`** and the regenerated **`index.html`** so local `file://` opens and PR checks stay in sync. Pull requests run **`python3 build.py --check`** to ensure `index.html` matches the fragments.
+
+### Tabs
+
+Main sections are shown as **tabs**: a tab strip under the hero switches panels; the **header links** control the same tabs. URLs use fragments (`#news`, `#partners`, …) for sharing and back/forward. Behaviour is implemented in **`js/tabs.js`** (loaded with `defer`). Tab labels and order follow **`build.py`** (`TAB_LABELS` + `src/sections/order.txt`).
 
 ## Publish under EarthDaily on GitHub
 
@@ -37,7 +62,7 @@ gh repo create earthdaily/nadir-itea-22014 --public --source=. --remote=origin -
 
 1. Repo **Settings** → **Pages**
 2. **Build and deployment** → Source: **GitHub Actions**
-3. The workflow `.github/workflows/pages.yml` will deploy on every push to `main`
+3. The workflow `.github/workflows/pages.yml` runs `build.py`, then publishes `index.html`, `css/`, and `assets/`
 4. After the first run, the site URL will appear under Pages (typically `https://earthdaily.github.io/nadir-itea-22014/`)
 
 ### Optional: custom domain
@@ -46,23 +71,24 @@ Add a `CNAME` file at the repo root with your hostname, configure DNS at your pr
 
 ## Local preview
 
-Open `index.html` in a browser, or serve the folder:
-
 ```bash
+python3 build.py
 python3 -m http.server 8080
 # visit http://127.0.0.1:8080
 ```
 
-## Structure
+## Other paths
 
 | Path | Purpose |
 |------|---------|
-| `index.html` | Single-page site (News + Partners sections) |
+| `build.py` | Assembles `index.html` from `src/` |
+| `index.html` | Generated full page (commit after `build.py`) |
 | `css/style.css` | Theme (ITEA-inspired blues / teal accent) |
+| `js/tabs.js` | Tab UI for main sections + hash / header sync |
 | `assets/nadir-logo.svg` | Project logo |
 | `assets/partners/*.svg` | Partner logos (replace placeholders with approved brand files) |
 
 ## Maintenance
 
-- Edit `index.html` for text and structure; adjust `css/style.css` for branding.
+- Edit files under `src/`, run `python3 build.py`, commit `src/` and `index.html`.
 - Reconcile consortium names, dates, and links with [itea4.org/project/nadir.html](https://itea4.org/project/nadir.html) before formal communications.

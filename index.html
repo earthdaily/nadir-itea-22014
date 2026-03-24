@@ -9,6 +9,7 @@
     />
     <title>NADIR · ITEA 4 Project 22014</title>
     <link rel="stylesheet" href="css/style.css" />
+    <script src="js/tabs.js" defer></script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -28,13 +29,13 @@
             <span class="brand__tagline">ITEA 4 · Project 22014</span>
           </span>
         </a>
-        <nav class="nav" aria-label="Primary">
-          <a href="#about">About</a>
-          <a href="#objectives">Objectives</a>
-          <a href="#news">News</a>
-          <a href="#partners">Partners</a>
-          <a href="#timeline">Timeline</a>
-          <a href="#resources">Resources</a>
+        <nav class="nav" aria-label="Primary" data-tabs-nav>
+          <a href="#about" data-tab="about">About</a>
+          <a href="#objectives" data-tab="objectives">Objectives</a>
+          <a href="#news" data-tab="news">News</a>
+          <a href="#partners" data-tab="partners">Partners</a>
+          <a href="#timeline" data-tab="timeline">Timeline</a>
+          <a href="#resources" data-tab="resources">Resources</a>
         </nav>
       </div>
     </header>
@@ -56,7 +57,19 @@
     </div>
 
     <main id="main">
-      <section id="about" aria-labelledby="about-title">
+    <div class="tabs" data-tabs-root>
+      <div class="tabs__bar">
+        <div class="tabs__list" role="tablist" aria-label="Page sections">
+          <button type="button" class="tabs__tab" role="tab" id="tab-about" aria-selected="true" aria-controls="about">About</button>
+          <button type="button" class="tabs__tab" role="tab" id="tab-objectives" aria-selected="false" aria-controls="objectives">Objectives</button>
+          <button type="button" class="tabs__tab" role="tab" id="tab-news" aria-selected="false" aria-controls="news">News</button>
+          <button type="button" class="tabs__tab" role="tab" id="tab-partners" aria-selected="false" aria-controls="partners">Partners</button>
+          <button type="button" class="tabs__tab" role="tab" id="tab-timeline" aria-selected="false" aria-controls="timeline">Timeline</button>
+          <button type="button" class="tabs__tab" role="tab" id="tab-resources" aria-selected="false" aria-controls="resources">Resources</button>
+        </div>
+      </div>
+      <div class="tabs__panels">
+      <section id="about" role="tabpanel" aria-labelledby="tab-about" tabindex="0">
         <h2 class="section__title" id="about-title">About the project</h2>
         <div class="card">
           <p>
@@ -68,14 +81,13 @@
           </p>
           <p>
             The project is part of the
-            <a href="https://itea.org/">ITEA</a> partnership, which supports pre-competitive
+            <a href="https://itea4.org/">ITEA</a> partnership, which supports pre-competitive
             innovation in software-intensive systems across industry and academia in Europe and
             partner countries.
           </p>
         </div>
       </section>
-
-      <section id="objectives" aria-labelledby="objectives-title">
+      <section id="objectives" role="tabpanel" aria-labelledby="tab-objectives" hidden tabindex="-1">
         <h2 class="section__title" id="objectives-title">Objectives</h2>
         <div class="card">
           <ul class="objectives">
@@ -94,8 +106,7 @@
           </ul>
         </div>
       </section>
-
-      <section id="news" aria-labelledby="news-title">
+      <section id="news" role="tabpanel" aria-labelledby="tab-news" hidden tabindex="-1">
         <h2 class="section__title" id="news-title">News</h2>
         <p class="section__intro">
           Project updates and milestones—new posts are added when you edit the site and redeploy.
@@ -127,8 +138,7 @@
           </article>
         </div>
       </section>
-
-      <section id="partners" aria-labelledby="partners-title">
+      <section id="partners" role="tabpanel" aria-labelledby="tab-partners" hidden tabindex="-1">
         <h2 class="section__title" id="partners-title">Partners</h2>
         <p class="section__intro">
           Nine organisations across five countries contribute to NADIR. Verify the latest list on
@@ -302,8 +312,7 @@
           </article>
         </div>
       </section>
-
-      <section id="timeline" aria-labelledby="timeline-title">
+      <section id="timeline" role="tabpanel" aria-labelledby="tab-timeline" hidden tabindex="-1">
         <h2 class="section__title" id="timeline-title">Timeline</h2>
         <div class="card">
           <p>
@@ -313,17 +322,18 @@
           </p>
         </div>
       </section>
-
-      <section id="resources" aria-labelledby="resources-title">
+      <section id="resources" role="tabpanel" aria-labelledby="tab-resources" hidden tabindex="-1">
         <h2 class="section__title" id="resources-title">Resources</h2>
         <div class="card">
           <div class="links">
-            <a href="https://itea.org/">ITEA — Home</a>
+            <a href="https://itea4.org/">ITEA — Home</a>
             <a href="https://itea4.org/project/nadir.html">ITEA 4 · NADIR project page</a>
-            <a href="https://itea.org/contact/">ITEA contact</a>
+            <a href="https://itea4.org/contact/">ITEA contact</a>
           </div>
         </div>
       </section>
+      </div>
+    </div>
     </main>
 
     <footer class="site-footer">
@@ -331,10 +341,10 @@
         <p>
           © <span id="y"></span> NADIR consortium. Content on this microsite summarizes public
           ITEA project information; authoritative details remain with
-          <a href="https://itea.org/">ITEA</a> and the project partners.
+          <a href="https://itea4.org/">ITEA</a> and the project partners.
         </p>
         <p>
-          <a href="https://itea.org/">itea.org</a>
+          <a href="https://itea4.org/">itea4.org</a>
           ·
           <a href="https://itea4.org/project/nadir.html">Project 22014 on ITEA4</a>
         </p>

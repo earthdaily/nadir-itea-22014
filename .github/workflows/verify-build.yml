@@ -1,0 +1,17 @@
+# Optional: run on PRs to ensure committed index.html matches src/ fragments.
+name: Verify HTML build
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Check index.html is up to date
+        run: python3 build.py --check
